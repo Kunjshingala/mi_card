@@ -18,39 +18,95 @@ class MyApp extends StatelessWidget {
         //   centerTitle: true,
         // ),
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.red,
-                child: Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('Images/kunj.png'),
               ),
-              Container(
-                  child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellow,
-                    child: Text('Container 1'),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Kunj Shingala",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Student",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 30,
+                  fontWeight: FontWeight.normal,
+                  letterSpacing: 2,
+                ),
+              ),
+              SizedBox(
+                height: 50.0,
+                // width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                  thickness: 1.0,
+                  indent: 20,
+                  endIndent: 20,
+                ),
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal[900],
+                    size: 30.0,
                   ),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellowAccent,
-                    child: Text('Container 2'),
-                  )
-                ],
-              )),
-              Container(
-                width: 100,
-                height: double.infinity,
-                color: Colors.blue,
-                child: Text('Container 3'),
+                  title: Text(
+                    '+91 8780562557',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontSize: 20.0,
+                      fontFamily: 'SourceSansPro',
+                    ),
+                  ),
+                  subtitle: Text(
+                    ' Mobile number',
+                    style: TextStyle(color: Colors.teal[900]),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal[900],
+                    size: 30.0,
+                  ),
+                  title: Text(
+                    'kunjshingala.p@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontSize: 20.0,
+                      fontFamily: 'SourceSansPro',
+                    ),
+                  ),
+                  subtitle: Text(
+                    '200540107146@darshan.ac.in',
+                    style: TextStyle(
+                        fontFamily: 'SourceSansPro', color: Colors.teal[900]),
+                  ),
+                ),
               )
             ],
           ),
